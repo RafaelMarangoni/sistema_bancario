@@ -89,7 +89,17 @@ const buildTransactions = (lancamentos) => {
 
     let html = [];
 
-    //ordernar lançamentos pelos últimos antes de fazer a limitação abaixo;
+    lancamentos = lancamentos.sort(function (a, b) {
+        console.log(a.date)
+        if (a.date < b.date) {
+          return 1;
+        }
+        if (a.date > b.date) {
+          return -1;
+        }
+        return 0;
+    });
+
     lancamentos.length = 3;
 
     lancamentos.forEach(({ date, descricao, valor }) => {
