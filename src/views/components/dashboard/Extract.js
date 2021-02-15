@@ -112,15 +112,15 @@ let extract = `
             <div class="bg-light p-1 text-left">
                 <h5>11 de Fevereiro</h5>
             </div>
-            <div  class="bloco p-1">
+            <div  class="content-justify--between content-flex p-1 ">
                 <div>Int pag banco</div>
                 <div> - R$ 249,97</div>
             </div>
-            <div class="bloco p-1 bg-light">
+            <div class="content-justify--between content-flex p-1  bg-light">
                 <div>Int pag banco</div>
                 <div> - R$ 249,97</div>
             </div>
-            <div class="bloco p-1">
+            <div class="content-justify--between content-flex p-1 ">
                 <div>Int pag banco</div>
                 <div> - R$ 249,97</div>
             </div>        
@@ -129,15 +129,15 @@ let extract = `
             <div class="bg-light p-1 text-left">
                 <h5>09 de Fevereiro</h5>
             </div>
-            <div  class="bloco p-1">
+            <div  class="content-justify--between content-flex p-1 ">
                 <div>Int pag banco</div>
                 <div> - R$ 249,97</div>
             </div>
-            <div class="bloco p-1 bg-light">
+            <div class="content-justify--between content-flex p-1  bg-light">
                 <div>Int pag banco</div>
                 <div> - R$ 249,97</div>
             </div>
-            <div class="bloco p-1">
+            <div class="content-justify--between content-flex p-1 ">
                 <div>Int pag banco</div>
                 <div> - R$ 249,97</div>
             </div>        

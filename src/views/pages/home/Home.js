@@ -4,6 +4,7 @@ import { formsignup as Form } from '../../components/index';
 import { nav as Nav } from '../../components/index';
 
 import UserService from '../../../service/UserService';
+import Swal from 'sweetalert2';
 
 import bgParalaxGirl from '../../../img/happy-bg.png';
 import celularWhite from '../../../img/cell-white-bg.png';
@@ -59,6 +60,7 @@ let Home = {
             });
             
             return;
+            
           }
 
           element.value = element.value.replace(/[^\d]+/g,'');	
