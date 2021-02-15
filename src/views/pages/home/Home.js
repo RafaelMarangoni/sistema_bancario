@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2';
+
 import { formsignup as Form } from '../../components/index';
 import { nav as Nav } from '../../components/index';
 
@@ -51,13 +53,12 @@ let Home = {
 
         if(element.id === 'cpf'){
           if(!Utils.isCpfValid(element.value)){
-              Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'CPF Inválido'
-            }).then(()=>{
-                
-            })
+            Swal.fire({
+              icon: 'error',
+              title: 'CPF inválido!',
+              text: 'Digite um CPF válido :)'
+            });
+            
             return;
             
           }
