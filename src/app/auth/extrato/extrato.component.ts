@@ -28,11 +28,15 @@ export class ExtratoComponent implements OnInit, OnDestroy {
   dataFim: string = '';
 
   ngOnInit(): void {
+    this.intializeData();
+    this.subscribeOnReload();
+  }
+
+  intializeData(){
     const data = new Date(Date.now()).toISOString().slice(0,10)
     this.dataInicio = data.slice(0,8)+'01'
     this.dataFim = data
     this.getStatementByPeriod(this.sigla,this.dataInicio, this.dataFim);
-    this.subscribeOnReload();
   }
 
   ngOnDestroy() {
@@ -84,7 +88,7 @@ export class ExtratoComponent implements OnInit, OnDestroy {
   subscribeOnReload() {
     this.reloadSubscription = this.headerDashService.$reloadData
       .subscribe(
-        () => this.ngOnInit(),
+        () => this.intializeData(),
       );
   }
 }
