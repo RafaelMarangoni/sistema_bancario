@@ -33,7 +33,10 @@ export class TransactionComponent {
     this.loading = true;
     this.service.doTransaction(transaction, operacao).pipe(
       take(1),
-      tap(() => form.resetForm()),
+      tap(response => {
+        this.msgError = response;
+        form.resetForm()
+      }),
       finalize(() => this.loading = false)
     ).subscribe(
       response => console.log(response),

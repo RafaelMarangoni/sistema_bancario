@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { finalize, take } from 'rxjs/operators';
-import { ILancamento } from 'src/app/shared/interfaces/dashboard.interface';
+import { HeaderDashService } from 'src/app/shared/components/headerdash/headerdash.service';
 import { IResponseStatement } from './extrato.interface';
 import { ExtratoService } from './extrato.service';
 
@@ -10,7 +11,12 @@ import { ExtratoService } from './extrato.service';
 })
 export class ExtratoComponent implements OnInit {
 
-  constructor(private service: ExtratoService) { }
+  reloadSubscription: Subscription | undefined;
+
+  constructor(
+    private service: ExtratoService,
+    private headerDashService: HeaderDashService
+    ) { }
 
   message: string = ''
   loading: boolean = false;
@@ -25,7 +31,12 @@ export class ExtratoComponent implements OnInit {
     const data = new Date(Date.now()).toISOString().slice(0,10)
     this.dataInicio = data.slice(0,8)+'01'
     this.dataFim = data
-    this.getStatementByPeriod(this.sigla,this.dataInicio, this.dataFim)
+    this.getStatementByPeriod(this.sigla,this.dataInicio, this.dataFim);
+    this.subscribeOnReload();
+  }
+
+  ngOnDestroy() {
+    this.reloadSubscription?.unsubscribe();
   }
 
   filter(){
@@ -68,5 +79,12 @@ export class ExtratoComponent implements OnInit {
       'text-negativo':valor<0,
       'text-neutro':valor==0,
     }
+  }
+
+  subscribeOnReload() {
+    this.reloadSubscription = this.headerDashService.$reloadData
+      .subscribe(
+        () => this.ngOnInit(),
+      );
   }
 }
