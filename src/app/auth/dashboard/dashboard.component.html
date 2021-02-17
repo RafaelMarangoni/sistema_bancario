@@ -1,7 +1,7 @@
 <div class="container">
   <div class="dash-header">
       <div class="section">
-        <app-headerdash [message]="message" [reloadFn]="getAccountData.bind(this)"></app-headerdash>
+        <app-headerdash [message]="message"></app-headerdash>
       </div>
   </div>
   <div class="accounts">
@@ -14,7 +14,7 @@
               <div class="content-intern--default">
                   <span class="text-card--default">Saldo atual</span>
                   <h2 [ngClass]="txtValor(account.value.saldo)">
-                   {{loading ? 'Carregando...' : account.value.saldo| currency }} 
+                   {{loading ? 'Carregando...' : account.value.saldo| currency }}
                   </h2>
               </div>
           </div>

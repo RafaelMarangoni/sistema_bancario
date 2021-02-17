@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { finalize, take } from 'rxjs/operators';
+import { HeaderDashService } from 'src/app/shared/components/headerdash/headerdash.service';
 import { IAccountPlan } from 'src/app/shared/interfaces/dashboard.interface';
 import { AccountPlanService } from 'src/app/shared/services/account-plan/account-plan.service';
 
@@ -9,7 +11,13 @@ import { AccountPlanService } from 'src/app/shared/services/account-plan/account
 })
 export class AccountPlanComponent implements OnInit {
 
-  constructor(private service: AccountPlanService) { }
+  reloadSubscription: Subscription | undefined;
+
+
+  constructor(
+    private service: AccountPlanService,
+    private headerDashService: HeaderDashService
+    ) { }
 
   message = "Liste e cadastre seus planos de conta aqui :)"
   account_plans: IAccountPlan[] = [];
@@ -18,6 +26,11 @@ export class AccountPlanComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAccountPlans();
+    this.subscribeOnReload();
+  }
+
+  ngOnDestroy() {
+    this.reloadSubscription?.unsubscribe();
   }
 
   getAccountPlans(){
@@ -46,5 +59,12 @@ export class AccountPlanComponent implements OnInit {
     }
 
     this.getAccountPlans();
+  }
+
+  subscribeOnReload() {
+    this.reloadSubscription = this.headerDashService.$reloadData
+      .subscribe(
+        () => this.getAccountPlans(),
+      );
   }
 }
