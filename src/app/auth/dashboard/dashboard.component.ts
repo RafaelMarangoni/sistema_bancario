@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { finalize, take } from 'rxjs/operators';
 import { HeaderDashService } from 'src/app/shared/components/headerdash/headerdash.service';
@@ -11,7 +11,7 @@ import { DashboardService } from './dashboard.service';
   templateUrl: './dashboard.component.html',
 })
 
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
 
   reloadSubscription: Subscription | undefined;
 
