@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
+import { HeaderDashService } from './headerdash.service';
 
 @Component({
   selector: 'app-headerdash',
@@ -9,11 +10,9 @@ import { AuthService } from '../../services/auth/auth.service';
 })
 export class HeaderDashComponent implements OnInit {
 
-    constructor(private router: Router, private authService: AuthService) { }
+    constructor(private router: Router, private authService: AuthService, private headerService: HeaderDashService) { }
 
     @Input() message = ""
-    @Input()
-    reloadFn = function(){}
 
     now = new Date();
     nome:string=""
@@ -31,6 +30,6 @@ export class HeaderDashComponent implements OnInit {
     }
 
     reload(){
-      this.reloadFn();
+      this.headerService.reloadOnClick();
     }
 }

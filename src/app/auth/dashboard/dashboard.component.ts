@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { finalize, take } from 'rxjs/operators';
+import { HeaderDashService } from 'src/app/shared/components/headerdash/headerdash.service';
 import { IAccount, IAccountResponse, ILancamento } from 'src/app/shared/interfaces/dashboard.interface';
 
 import { DashboardService } from './dashboard.service';
@@ -9,9 +11,14 @@ import { DashboardService } from './dashboard.service';
   templateUrl: './dashboard.component.html',
 })
 
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
 
-  constructor(private service: DashboardService) { }
+  reloadSubscription: Subscription | undefined;
+
+  constructor(
+    private service: DashboardService,
+    private headerDashService: HeaderDashService
+    ) { }
 
   loading: boolean = false;
 
@@ -47,11 +54,16 @@ export class DashboardComponent implements OnInit {
   public message: string = 'Olá, Usuár, seja bem vind! :)'
 
   ngOnInit(): void {
-      this.loading = true;
       this.getAccountData();
+      this.subscribeOnReload();
+  }
+
+  ngOnDestroy() {
+    this.reloadSubscription?.unsubscribe();
   }
 
   getAccountData(){
+    this.loading = true;
     this.service.getAccountData().pipe(
       take(1),
       finalize(() => this.loading = false)
@@ -84,5 +96,12 @@ export class DashboardComponent implements OnInit {
       'text-negativo':valor<0,
       'text-neutro':valor==0,
     }
+  }
+
+  subscribeOnReload() {
+    this.reloadSubscription = this.headerDashService.$reloadData
+      .subscribe(
+        () => this.getAccountData(),
+      );
   }
 }
