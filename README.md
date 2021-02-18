@@ -59,11 +59,11 @@ A aplicação  está separada em componentes, todo o projeto está modularizado,
 
 **Dentro de assets sass se encontra toda estrutura de estilização de cada components e commons,separando as estilazaçõs especificas das generalizadas.**
 
- ┣ 📂assets
- ┃ ┣ 📂sass
- ┃ ┃ ┣ 📂commons
- ┃ ┃ ┗ 📂components
- ┣ 📂css
+ ┣ 📂assets<br>
+ ┃ ┣ 📂sass<br>
+ ┃ ┃ ┣ 📂commons<br>
+ ┃ ┃ ┗ 📂components<br>
+ ┣ 📂css<br>
 
 
 * Todos imports do Sass se encontra dentro do Styles.scss 
@@ -79,7 +79,8 @@ Necessario relizar ```sh npm i "enter" ``` (npm install), para instalar todas de
 
 ## Scrum 
 
-* Optamos pela divisão no modo Ka
+* Optamos pela divisão no modo Kaban, utilizando o proprio sistema de ISSUE do git, onde facilita a gestão do projeto. 
+
 Para vizualizar a separação dos projetos clique <a href="https://github.com/RafaelMarangoni/sistema_bancario/projects/4">Aqui</a>
 </p>
 
