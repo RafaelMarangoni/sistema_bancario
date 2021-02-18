@@ -3,12 +3,19 @@
 
 ## Descrição 
 
-Projeto proposto no bootcamp da GAMA ACCENTURE, onde tinhamos que iniciar um projeto em JS, criar nossa propria aplicação com webpack sem o auxilio de um frame work 
--> repositório :  https://github.com/RafaelMarangoni/sistema_bancario/tree/front%233 
--> netfly :  https://desbugados.netlify.app/
-Após a finalização migramos toda a aplicação para angular . 
--> repositório : https://github.com/RafaelMarangoni/sistema_bancario/tree/angular
--> netfly https://app-desbugados.netlify.app/
+Projeto proposto no bootcamp da GAMA ACCENTURE, onde tinhamos que cirar uma aplicação JS, criar nossa propria aplicação com webpack sem o auxilio de um frame work , e após isso tranferir o projeto para angular. 
+
+### Tecnologias usadas 
+
+* Angular 
+* RxJs
+* JavaScript 
+
+-> repositório :  https://github.com/RafaelMarangoni/sistema_bancario/tree/front%233 <br>
+-> netfly :  https://desbugados.netlify.app/<br>
+Após a finalização migramos toda a aplicação para angular .<Br> 
+-> repositório : https://github.com/RafaelMarangoni/sistema_bancario/tree/angular<br>
+-> netfly https://app-desbugados.netlify.app/<br>
 
 ## Design 👨‍🎨👩‍🎨
 
@@ -30,7 +37,7 @@ A aplicação  está separada em componentes, todo o projeto está modularizado,
 📦src<br>
  ┣ 📂app<br>
  ┃ ┣ 📂auth <br>
-       **Dentro de Auth se encontra a base do dashboard.**<br>
+ ┃ ┃ **Dentro de Auth se encontra a base do dashboard.**<br>
  ┃ ┃ ┣ 📂account-plan<br>
  ┃ ┃ ┣ 📂dashboard<br>
  ┃ ┃ ┣ 📂extrato<br>
@@ -81,11 +88,5 @@ Necessario relizar ```sh npm i "enter" ``` (npm install), para instalar todas de
 
 * Optamos pela divisão no modo Kaban, utilizando o proprio sistema de ISSUE do git, onde facilita a gestão do projeto. 
 
-Para vizualizar a separação dos projetos clique <a href="https://github.com/RafaelMarangoni/sistema_bancario/projects/4">Aqui</a>
-</p>
-
-
-## Participantes 
-<p>Você pode ver os contribuidores do projeto aqui 
-<a href="https://github.com/RafaelMarangoni/sistema_bancario/graphs/contributors">Aqui</a>
+Para visualizar a separação dos projetos clique <a href="https://github.com/RafaelMarangoni/sistema_bancario/projects/4">Aqui</a>
 </p>
