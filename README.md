@@ -1,27 +1,90 @@
-# BankDesbugados
+# BankDesbugados 🚀🚀
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
-## Development server
+## Descrição 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Projeto proposto no bootcamp da GAMA ACCENTURE, onde tinhamos que iniciar um projeto em JS, criar nossa propria aplicação com webpack sem o auxilio de um frame work 
+-> repositório :  https://github.com/RafaelMarangoni/sistema_bancario/tree/front%233 
+-> netfly :  https://desbugados.netlify.app/
+Após a finalização migramos toda a aplicação para angular . 
+-> repositório : https://github.com/RafaelMarangoni/sistema_bancario/tree/angular
+-> netfly https://app-desbugados.netlify.app/
 
-## Code scaffolding
+## Design 👨‍🎨👩‍🎨
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Proposto como base para poder termos uma base de criação. 
+Paleta de cores -
 
-## Build
+Predominante roxa  
+Secundarias verde
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Sobre a estrutura do projeto 🛠
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A aplicação  está separada em componentes, todo o projeto está modularizado, conforme o carregamento, onde os modulos são carregados conforme a necessidade de serem utilizados dentro da mesma chamada. 
 
-## Running end-to-end tests
+### Estrutura de pastas 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### components 
 
-## Further help
+📦src
+ ┣ 📂app
+ ┃ ┣ 📂auth 
+       **Dentro de Auth se encontra a base do dashboard.**
+ ┃ ┃ ┣ 📂account-plan
+ ┃ ┃ ┣ 📂dashboard
+ ┃ ┃ ┣ 📂extrato
+ ┃ ┃ ┣ 📂transaction
+ ┃ ┣ 📂changepass
+ ┃ ┣ 📂error404
+ ┃ ┣ 📂forgotpass
+ ┃ ┣ 📂home
+ ┃ ┃ ┣ 📂bloco-anuidade
+ ┃ ┃ ┣ 📂bloco-cadastro-login
+ ┃ ┃ ┃ ┣ 📂bloco-login
+ ┃ ┃ ┃ ┣ 📂form-cadastro
+ ┃ ┣ 📂login
+ ┃ ┣ 📂shared
+        **Componentes re-utilizados (onde se encontram em diversas partes da aplicação), estão juntos dentro da pasta shared, dentro de shared também se encontra as interfaces dos mesmos.**
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┣ 📂headerdash
+ ┃ ┃ ┃ ┣ 📂nav
+ ┃ ┃ ┃ ┗ 📂navdashboard
+ ┃ ┃ ┣ 📂interfaces
+ ┃ ┃ ┗ 📂services
+ ┃ ┃ ┃ ┣ 📂account-plan
+ ┃ ┃ ┃ ┗ 📂auth
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### estilização 
+
+**Dentro de assets sass se encontra toda estrutura de estilização de cada components e commons,separando as estilazaçõs especificas das generalizadas.**
+
+ ┣ 📂assets
+ ┃ ┣ 📂sass
+ ┃ ┃ ┣ 📂commons
+ ┃ ┃ ┗ 📂components
+ ┣ 📂css
+
+
+* Todos imports do Sass se encontra dentro do Styles.scss 
+
+## Utilização 
+
+Necessario relizar ```sh npm i "enter" ``` (npm install), para instalar todas dependencias citadas dentro do .gitignore 
+
+## Padrão de commit 
+
+* Utilizamos o padrao Conventional Commits Pattern 
+```sh type(scope): subject ```
+
+## Scrum 
+
+* Optamos pela divisão no modo Ka
+Para vizualizar a separação dos projetos clique <a href="https://github.com/RafaelMarangoni/sistema_bancario/projects/4">Aqui</a>
+</p>
+
+
+## Participantes 
+<p>Você pode ver os contribuidores do projeto aqui 
+<a href="https://github.com/RafaelMarangoni/sistema_bancario/graphs/contributors">Aqui</a>
+</p>
