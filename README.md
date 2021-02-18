@@ -27,33 +27,33 @@ A aplicação  está separada em componentes, todo o projeto está modularizado,
 
 #### components 
 
-📦src
- ┣ 📂app
- ┃ ┣ 📂auth 
-       **Dentro de Auth se encontra a base do dashboard.**
- ┃ ┃ ┣ 📂account-plan
- ┃ ┃ ┣ 📂dashboard
- ┃ ┃ ┣ 📂extrato
- ┃ ┃ ┣ 📂transaction
- ┃ ┣ 📂changepass
- ┃ ┣ 📂error404
- ┃ ┣ 📂forgotpass
- ┃ ┣ 📂home
- ┃ ┃ ┣ 📂bloco-anuidade
- ┃ ┃ ┣ 📂bloco-cadastro-login
- ┃ ┃ ┃ ┣ 📂bloco-login
- ┃ ┃ ┃ ┣ 📂form-cadastro
- ┃ ┣ 📂login
- ┃ ┣ 📂shared
-        **Componentes re-utilizados (onde se encontram em diversas partes da aplicação), estão juntos dentro da pasta shared, dentro de shared também se encontra as interfaces dos mesmos.**
- ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┣ 📂headerdash
- ┃ ┃ ┃ ┣ 📂nav
- ┃ ┃ ┃ ┗ 📂navdashboard
- ┃ ┃ ┣ 📂interfaces
- ┃ ┃ ┗ 📂services
- ┃ ┃ ┃ ┣ 📂account-plan
- ┃ ┃ ┃ ┗ 📂auth
+📦src<br>
+ ┣ 📂app<br>
+ ┃ ┣ 📂auth <br>
+       **Dentro de Auth se encontra a base do dashboard.**<br>
+ ┃ ┃ ┣ 📂account-plan<br>
+ ┃ ┃ ┣ 📂dashboard<br>
+ ┃ ┃ ┣ 📂extrato<br>
+ ┃ ┃ ┣ 📂transaction<br>
+ ┃ ┣ 📂changepass<br>
+ ┃ ┣ 📂error404<br>
+ ┃ ┣ 📂forgotpass<br>
+ ┃ ┣ 📂home<br>
+ ┃ ┃ ┣ 📂bloco-anuidade<br>
+ ┃ ┃ ┣ 📂bloco-cadastro-login<br>
+ ┃ ┃ ┃ ┣ 📂bloco-login<br>
+ ┃ ┃ ┃ ┣ 📂form-cadastro<br>
+ ┃ ┣ 📂login<br>
+ ┃ ┣ 📂shared<br>
+        **Componentes re-utilizados (onde se encontram em diversas partes da aplicação), estão juntos dentro da pasta shared, dentro de shared também se encontra as interfaces dos mesmos.**<br>
+ ┃ ┃ ┣ 📂components<br>
+ ┃ ┃ ┃ ┣ 📂headerdash<br>
+ ┃ ┃ ┃ ┣ 📂nav<br>
+ ┃ ┃ ┃ ┗ 📂navdashboard<br>
+ ┃ ┃ ┣ 📂interfaces<br>
+ ┃ ┃ ┗ 📂services<br>
+ ┃ ┃ ┃ ┣ 📂account-plan<br>
+ ┃ ┃ ┃ ┗ 📂auth<br>
 
 #### estilização 
 
